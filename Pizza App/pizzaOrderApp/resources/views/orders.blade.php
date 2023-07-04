@@ -3,11 +3,17 @@
 @section('content')
 <div class="container bg-light bg-opacity-75 p-5">
     <h1 class="text-center fw-bold border-bottom border-dark">{{auth()->user()->name}} Your Orders</h1>
-    
+   
+    @if (session('status'))
+      <div class="bg-success text-center py-3 rounded text-white">
+      {{session('status')}}
+      </div> 
+    @endif
+
     @if ($orders->isEmpty())
        <p>No orders found.</p>
     @else
-    <ul>
+     <ul>
         @foreach ($orders as $order)
           <div class="d-flex justify-content-between">
             <li>
@@ -20,7 +26,7 @@
             </p>
           </div>
         @endforeach
-    </ul>
-@endif
+     </ul>
+    @endif
 </div>    
 @endsection

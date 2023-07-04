@@ -56,13 +56,5 @@
          </form>
        </div>
        @endauth    
-   
-    @guest
-    <div class="d-flex justify-content-center">  
-     <a class="btn btn-lg text-decoration-none text-white rounded-pill mt-5 me-3 bg-success" href="{{route('register')}}">Register</a>
-     <a class="btn btn-lg text-decoration-none text-white rounded-pill mt-5 bg-success" href="{{route('login')}}">Log in</a>
-    </div>
-    @endguest
-   
     @endsection
 

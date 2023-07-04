@@ -7,11 +7,11 @@
             <div class="w-50 mx-auto">
 
                
-                @if (session('status'))
+            @if (session('status'))
                 <div class="bg-danger py-3 rounded text-white">
                 {{session('status')}}
                 </div> 
-              @endif
+            @endif
               
 
             <form  action="{{route('login')}}" method="POST">

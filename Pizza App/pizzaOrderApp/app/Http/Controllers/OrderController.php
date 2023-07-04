@@ -49,7 +49,7 @@ class OrderController extends Controller
         $order->total = $total;
         $order->save();
 
-        return redirect('/orders');
+        return redirect('/orders')->with('status','Your order created successfully');
     }
 
 }
